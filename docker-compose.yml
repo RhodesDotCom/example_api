@@ -1,0 +1,22 @@
+version: '3'
+services:
+
+  api:  
+    build: ./api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./api:/app
+
+  postgres:
+    image: postgis/postgis:latest
+    container_name: events_db
+    environment:
+      POSTGRES_DB: events_db
+      POSTGRES_USER: events_user
+      POSTGRES_PASSWORD: events_password
+    ports:
+      - "5432:5432" 
+    volumes:
+      - ./events_db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./events_db/data:/docker-entrypoint-initdb.d/data
