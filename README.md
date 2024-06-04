@@ -4,11 +4,11 @@
 Docker
 
 # Start
-To start database and API routes navigate to directory containing docker-compose.yml and run: "docker-compose up -d --build"
+To start the database and API routes navigate to the cloned directory containing docker-compose.yml and run: "docker-compose up -d --build".
 
 # Routes
-POST /venues
-Host: localhost:5000
+POST /venues <br/>
+Host: localhost:5000 <br/>
 example input:
     {
         "venue_name": "Example 1",
@@ -16,13 +16,13 @@ example input:
         "bbox": {}
     }
 
-venue_name is mandatory
-capacity and bbox are optional
+venue_name is mandatory <br/>
+capacity and bbox are optional <br/>
 
 
-GET /venues/{venue_id}
-Host: localhost:5000
-example response:
+GET /venues/{venue_id} <br/>
+Host: localhost:5000 <br/>
+example response: <br/>
     {
         "bbox": "{}",
         "capacity": 100,
@@ -31,14 +31,14 @@ example response:
     }
 
 
-GET /performing-artists/{event_id}
-Host: localhost:5000
-example response:
-    [
-        {
-            "artist_name": "artist 1"
-        },
-        {
-            "artist_name": "artist 2"
-        }
-    ]
+GET /performing-artists/{event_id} <br/>
+Host: localhost:5000 <br/>
+example response: <br/>
+    [ <br/>
+        { <br/>
+            "artist_name": "artist 1" <br/>
+        }, <br/>
+        { <br/> 
+            "artist_name": "artist 2" <br/>
+        } <br/>
+    ] <br/>
