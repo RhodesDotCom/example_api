@@ -75,15 +75,14 @@ class TestApp(unittest.TestCase):
 
 
     def test_get_performing_artists(self):
-        response = self.app.get('/performing-artists/Electric%20Groove')
+        response = self.app.get('/performing-artists/2')
 
         self.assertEqual(response.status_code, 200)
 
         expected_data = [
-            {"artist_name": "Lorde"},
-            {"artist_name": "Paramore"},
-            {"artist_name": "Dave"},
-            {"artist_name": "Taylor Swift"}
+            {
+                "artist_name": "Dua Lipa"
+            }
         ]
 
         self.assertEqual(response.json, expected_data)
@@ -91,11 +90,11 @@ class TestApp(unittest.TestCase):
 
     def test_get_performing_artists_404(self):
 
-        response = self.app.get('/performing-artists/404test')
+        response = self.app.get('/performing-artists/404')
 
         self.assertEqual(response.status_code, 404)
 
-        expected_data = {"error": "This Event does not exist or no artists associated with this event"}
+        expected_data = {"error": "Event not found or no artists associated with this event"}
 
         self.assertEqual(response.json, expected_data)
 
