@@ -35,7 +35,12 @@ example response: <br/>
         {
             "artist_name": "artist 1" 
         },
-        {  
+        {
             "artist_name": "artist 2"
         }
     ]
+
+# Unittests
+
+to run unittests access docker api container using - docker exec it [container_id] bash <br/>
+then run the follwing to run unittests - python -m unittest discover -s tests
