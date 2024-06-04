@@ -16,9 +16,6 @@ example input:
         "bbox": {}
     }
 
-venue_name is mandatory <br/>
-capacity and bbox are optional <br/>
-
 
 GET /venues/{venue_id} <br/>
 Host: localhost:5000 <br/>
@@ -34,11 +31,11 @@ example response: <br/>
 GET /performing-artists/{event_id} <br/>
 Host: localhost:5000 <br/>
 example response: <br/>
-    [ <br/>
-        { <br/>
-            "artist_name": "artist 1" <br/>
-        }, <br/>
-        { <br/> 
-            "artist_name": "artist 2" <br/>
-        } <br/>
-    ] <br/>
+    [
+        {
+            "artist_name": "artist 1" 
+        },
+        {  
+            "artist_name": "artist 2"
+        }
+    ]
