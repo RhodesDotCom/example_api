@@ -1,4 +1,4 @@
-# iventis_api
+# example_api
 
 # Prerequisites
 Docker
